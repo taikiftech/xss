@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>XSS_lv1</title>
 </head>
 <body>
-    
+    <main>
+        <div class="main_container">
+            <h1 id="title">XSS_lv1</h1>
+                <input type="text" name="name" id="text">
+                <button onclick="xss_lv1()">送信</button>
+            <form action="/top" method="get">
+                <a href="top">TOP</a>
+            </form>
+
+            <form action="/xss_lv2" method="get">
+                <a href="xss_lv2">Lv.2</a>
+            </form>
+
+        </div>
+
+    </main>
+    <script src="xss_lv1.js"></script>
 </body>
 </html>
