@@ -8,21 +8,20 @@
 <body>
     <main>
         <div class="main_container">
-            <h1>XSS_test</h1>
-            <form action="/" method="post">
-                <input type="text" name="name" id="id">
-                <button>送信</button>
-            </form>
+            <h1 id="title">XSS_test</h1>
+                <input type="text" name="name" id="text">
+                <button onclick="input_form()">送信</button>
             <form action="/xss_lv1" method="get">
-                <a href="xss_lv1.html">Lv.1</a>
+                <a href="xss_lv1">Lv.1</a>
             </form>
 
             <form action="/xss_lv2" method="get">
-                <a href="xss_lv2.html">Lv.2</a>
+                <a href="xss_lv2">Lv.2</a>
             </form>
 
         </div>
 
     </main>
+    <script src="xss.js"></script>
 </body>
 </html>
