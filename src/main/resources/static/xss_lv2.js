@@ -1,9 +1,9 @@
 
 
 function xss_lv2(){
-    const last = document.getElementById('last').value;
-    const middle = document.getElementById('middle').value;
-    const first = document.getElementById('first').value;
+    const last = document.getElementById('last').value.toLowerCase();
+    const middle = document.getElementById('middle').value.toLowerCase();
+    const first = document.getElementById('first').value.toLowerCase();
     var title = document.getElementById('title');
 
     if (last.indexOf('script')!= -1 | -1 != last.indexOf('div')| -1 != last.indexOf('button')| -1 != last.indexOf('a')| -1 != last.indexOf('p')| -1 != last.indexOf('h')| -1 != last.indexOf('img')| -1 != last.indexOf('onerror')){
