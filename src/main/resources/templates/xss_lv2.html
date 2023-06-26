@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>XSS_lv2</title>
 </head>
 <body>
-    
+    <main>
+        <div class="main_container">
+            <h1 id="title">XSS_lv2</h1>
+            <h2>お名前を入力してください。</h2>
+                LastName<input type="text" name="name" id="last">
+                MiddleName<input type="text" name="name" id="middle">
+                FirstName<input type="text" name="name" id="first">
+                <button onclick="xss_lv2()">送信</button>
+
+            <form action="/top" method="get">
+                <a href="/">TOP</a>
+            </form>
+            <form action="/xss_lv1" method="get">
+                <a href="xss_lv1">Lv.1</a>
+            </form>
+        </div>
+    </main>
+    <script src="xss_lv2.js"></script>
 </body>
 </html>
